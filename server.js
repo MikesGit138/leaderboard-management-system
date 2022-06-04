@@ -3,13 +3,15 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const mysql = require('mysql')
 const db = require('./database/db')
-const app = express()
+const server = express()
 
 //route variables 
 const homeRoute = require('./routes/home')
 
 //routes
-app.use('/', homeRoute)
+server.use('/', homeRoute)
 
-app.listen(`${port}`)
+
+
+server.listen(port, console.log(`listening on http://localhost:${port}`))
 

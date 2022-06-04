@@ -5,12 +5,12 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'notamberdb'
+    database: 'leaderboard'
 })
 
 //run test to see if database is connected
 connection.connect(function(error){
-    if (!error) console.log('Employee Database Connected')
+    if (!error) console.log('Leaderboard Database Connected')
     else console.log(error)
 })
 
