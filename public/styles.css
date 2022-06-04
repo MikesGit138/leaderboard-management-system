@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Outfit:wght@300&display=swap');
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 66%, rgba(9, 9, 121, 1) 100%, rgba(0, 0, 9, 1) 100%);
+    font-family: 'Nunito', sans-serif;
+}
+
+.home-head {
+    color: white;
+}
