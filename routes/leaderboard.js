@@ -10,8 +10,7 @@ router.get('/leaderboard', (req, res) =>{
        else console.log('leaderboard query ran')
    res.render('leaderboard',{
       table: 'friends',
-      friends: rows
-
+      friends: rows  
    })
 })
 })

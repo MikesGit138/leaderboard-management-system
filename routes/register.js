@@ -19,7 +19,7 @@ router.post('/register', async (req,res)=>{
         let data = {
             username: req.body.username,
             password: hashedPassword
-        }
+        }``````````````````````````````````````````````````````````````````````````````````````
         let sql = "INSERT INTO user SET ?"
         let query = connection.query(sql, data, (err, results) =>{
                                 if(err) throw err

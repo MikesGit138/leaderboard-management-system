@@ -1,32 +1,16 @@
 <head>
     <link rel="stylesheet" href="styles.css">
-    <title>Student Login Page</title>
+    <title>Register</title>
 </head>
 <body>
-<section class="login-ctn">
-    <div
-        class="login">
-        <h1>Student Login</h1>
+<section class="reg-ctn">
+    <div class="reg">
+        <h1>Register</h1>
         <form action="/register" method="post">
-            <%# if (message.error) { %>
-                <span class="text-red-500 mt-9">
-                    <%# message %>
-                </span>
-                <%# } %>
                     <div>
                         <label for="name" class="text-slate-800">Username</label>
                         <input type="text" id="name" name="username" required class="rounded mb-5 mt-4 mr-9" required>
                     </div>
-                    <br>
-                    <!-- <div>
-                        <label for="name" class="text-slate-800">First Name</label>
-                        <input type="text" id="name" name="fname" required class="rounded mb-5 mt-4 mr-9">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="name" class="text-slate-800">Last Name</label>
-                        <input type="text" id="name" name="lname" required class="rounded mb-5 mt-4 mr-9">
-                    </div> -->
                     <br>
                     <div>
                         <label for="password" class="text-slate-800">Password</label>
@@ -35,8 +19,8 @@
                     <br>
 
                     </div>
-                    <button type="submit">Login</button>
-                    <button><a href="/register">Register</a></button>
+                    <button><a href="/login">Back to Login</a></button>
+                    <button type="submit">Register</button>
         </form>
     </div>
 </section>
