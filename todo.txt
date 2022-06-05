@@ -1,0 +1,5 @@
+use count function to count the number of friends
+use max to know the best friends
+use min to know the worst friends
+
+give the buttons the functinality to update the points

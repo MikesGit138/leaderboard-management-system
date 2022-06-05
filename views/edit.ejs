@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Edit Page</title>
+</head>
+<body>
+        <form action="/update" method="post">
+            <input type="hidden" name="id" value="<%= friends.id %>">
+
+            <div>
+                <label for="projectTitle">First Name</label>
+                <input type="text" name="firstName" value="<%= friends.first_name %>">
+            </div>
+            <div>
+                <label for="description">Last Name</label>
+                <input type="text" name="lastName" value="<%= friends.last_name %>">
+            </div>
+            <div>
+                <label for="start">Rank</label>
+                <input type="text" name="rank" value="<%= friends.rank %>">
+            </div>
+            <div>
+                <label for="due">Points</label>
+                <input type="text" name="points" value="<%= friends.points %>">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>

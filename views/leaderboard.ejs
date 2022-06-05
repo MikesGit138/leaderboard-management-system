@@ -12,7 +12,7 @@
         <th>Rank</th>
         <th>Points</th>
         <th>Action</th>
-        <th>Change</th>
+        <th>Edit</th>
     </tr>
     <%  friends.forEach( (friend) => { %>
         <tr>
@@ -33,8 +33,7 @@
                 <button>-10</button>
             </td>
             <td>
-                <button><a href="#">Edit</a></button>
-                <button><a href="#">View</a></button>
+                <button><a href="edit/<%= friend.id %> ">Edit</a></button>
             </td>
         </tr>
         <% }) %>

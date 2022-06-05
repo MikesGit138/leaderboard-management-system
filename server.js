@@ -35,12 +35,14 @@ const homeRoute = require('./routes/home')
 const leaderboardRoute = require('./routes/leaderboard')
 const loginRoute = require('./routes/login')
 const regRoute = require('./routes/register')
+const editRoute = require('./routes/edit')
 
 //routes
 server.use('/', homeRoute)
 server.use('/', leaderboardRoute)
 server.use('/', loginRoute)
 server.use('/', regRoute)
+server.use('/', editRoute)
 
 
 server.listen(port, console.log(`listening on http://localhost:${port}`))
