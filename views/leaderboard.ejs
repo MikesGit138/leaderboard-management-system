@@ -1,1 +1,41 @@
-<h1>leaderboard route works</h1>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>LeaderBoard Page</title>
+</head>
+<body>
+<h1><%= table %> LeaderBoard</h1>
+<br><br>
+<table border="1" id="books">
+    <tr>
+        <th>id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Rank</th>
+        <th>Points</th>
+        <th>Action</th>
+    </tr>
+    <%  friends.forEach( (friend) => { %>
+        <tr>
+            <td>
+                <%= friend.id %>
+            </td>
+            <td>
+                <%= friend.first_name %>
+            </td>
+            <td>
+                <%= friend.last_name %>
+            </td>
+            <td>
+                <%= friend.rank %>
+            </td>
+            <td>
+                <%= friend.points %>
+            </td>
+            <td>
+                <a href=""><button>+10</button></a>
+                <a href=""><button>-10</button></a>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+</body>
