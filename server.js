@@ -44,6 +44,5 @@ server.use('/', loginRoute)
 server.use('/', regRoute)
 server.use('/', editRoute)
 
-
 server.listen(port, console.log(`listening on http://localhost:${port}`))
 
