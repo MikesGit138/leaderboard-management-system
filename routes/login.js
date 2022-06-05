@@ -25,9 +25,9 @@ router.post('/login',(req,res)=>{
         }
   
         else{
-        //   req.flash('error', 'incorrect credentials')
-            // res.redirect('/login')  
-          res.send('incorrect login info')
+          req.flash('error', 'incorrect credentials')
+          res.redirect('/login')  
+         // res.send('incorrect login info')
         }
         res.end()
     })

@@ -8,11 +8,11 @@
         class="login">
         <h1>Login</h1>
         <form action="/login" method="post">
-            <%# if (message.error) { %>
-                <span>
-                    <%# message %>
+            <% if (messages.error) { %>
+                <span style="color: red;">
+                    <%- messages.error %>
                 </span>
-                <%# } %>
+                <% } %>
                     <div>
                         <label for="username">Username</label>
                         <input type="text" id="name" name="username" required>

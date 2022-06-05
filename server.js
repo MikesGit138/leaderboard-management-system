@@ -3,6 +3,7 @@ const port = 5050
 const bodyParser = require('body-parser')
 const express = require('express')
 const session = require('express-session')
+const flash = require('express-flash')
 const bcrypt = require('bcrypt')
 const path = require('path')
 const cookieParser = require('cookie-parser')
@@ -18,6 +19,8 @@ server.use(express.static('public'))
 
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }))
+
+server.use(flash())
 
 server.use(cookieParser())
 server.use(session({
