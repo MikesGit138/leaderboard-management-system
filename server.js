@@ -30,7 +30,6 @@ server.use(session({
     cookie: { maxAge: 120000 }
 }))
 
-
 //route variables 
 const homeRoute = require('./routes/home')
 const leaderboardRoute = require('./routes/leaderboard')

@@ -25,9 +25,9 @@ router.post('/login',(req,res)=>{
         }
   
         else{
-          req.flash('error', 'incorrect credentials')
+          req.flash('error', 'no user found')
           res.redirect('/login')  
-         // res.send('incorrect login info')
+          req.session.loggedin = false;
         }
         res.end()
     })
@@ -38,7 +38,6 @@ router.post('/login',(req,res)=>{
   // Logout user
 router.get('/logout', function (req, res) {
   req.session.destroy();
-  // req.flash('success', 'Enter Your Login Credentials')
   res.redirect('/login');
 });
 
