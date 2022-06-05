@@ -1,12 +1,14 @@
 const port = 5050
+
 const bodyParser = require('body-parser')
 const express = require('express')
 const session = require('express-session')
 const bcrypt = require('bcrypt')
-const mysql = require('mysql')
 const path = require('path')
-const db = require('./database/db')
+const cookieParser = require('cookie-parser')
 
+const mysql = require('mysql')
+const db = require('./database/db')
 
 const server = express()
 
@@ -15,11 +17,14 @@ server.set('views', path.join(__dirname, 'views'))
 server.use(express.static('public'))
 
 server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.urlencoded({ extended: true }))
+
+server.use(cookieParser())
 server.use(session({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+    cookie: { maxAge: 120000 }
 }))
 
 
