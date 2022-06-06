@@ -1,43 +1,48 @@
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <title>LeaderBoard Page</title>
 </head>
 <body>
-<h1><%= table %> LeaderBoard</h1>
-<br><br>
-<table border="1" id="books">
-    <tr>
-        <!-- <th>id</th> -->
-        <th>Name</th>
-        <th>Rank</th>
-        <th>Points</th>
-        <th>Action</th>
-        <th>Edit</th>
-    </tr>
-    <%  friends.forEach( (friend) => { %>
-        <tr>
-            <!-- <td>
+    <button style="float: right; background-color: green; border-radius: 8px; padding: 10px;">
+        <a href="/" style="color: white; text-decoration: none">Back To Home</a></button>
+    <section class="lead-ctn">
+        <h1><span><%= table %></span> LeaderBoard</h1>
+        <table border="1" id="friends">
+            <tr>
+                <!-- <th>id</th> -->
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Points</th>
+                <th>Action</th>
+                <th>Edit</th>
+            </tr>
+            <% friends.forEach( (friend)=> { %>
+                <tr>
+                    <!-- <td>
                 <%# friend.id %>
             </td> -->
-            <td>
-                <%= friend.first_name + " " + friend.last_name%>
-            </td>
-            <td>
-                <%= friend.rank %>
-            </td>
-            <td>
-                <%= friend.points %>
-            </td>
-            <td>
-                <button>+10</button>
-                <button>-10</button>
-            </td>
-            <td>
-                <button><a href="edit/<%= friend.id %> ">Edit</a></button>
-            </td>
-        </tr>
-        <% }) %>
-</table>
-<button><a href="/add">Add Friend</a></button>
-<div>You have <span><%= count %> </span> friends</div>
+                    <td>
+                        <%= friend.first_name + " " + friend.last_name%>
+                    </td>
+                    <td>
+                        <%= friend.rank %>
+                    </td>
+                    <td>
+                        <%= friend.points %>
+                    </td>
+                    <td>
+                        <button>+100</button>
+                        <button class="minus">-100</button>
+                    </td>
+                    <td>
+                        <button><a href="edit/<%= friend.id %> ">Edit</a></button>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+        <button><a href="/add">Add Friend</a></button>
+        <div>You have <span>
+                <%= count %>
+            </span> friends</div>
+    </section>
 </body>

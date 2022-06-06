@@ -10,10 +10,12 @@ body {
 
 .home-head {
     color: white;
+    margin: 70px;
 }
 .home-ctn{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .head-text{
     color: green;
@@ -41,3 +43,124 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.login-ctn{
+    background-color: rgb(28, 28, 46);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    font-size: 30px;
+    border-radius: 8px;
+    
+}
+.login-ctn div{
+    margin-bottom: 10px;
+}
+.login-ctn button{
+    background-color: rgb(12, 12, 20);
+    color: white;
+    padding: 10px;
+    border: 5px solid white;
+    font-size: 20px;
+}
+.login-ctn button a{
+    text-decoration: none;
+    color: white;
+}
+.login-ctn button a:hover{
+    color:rgb(12, 12, 20)
+}
+.login-ctn button:hover{
+    cursor: pointer;
+    color: rgb(12, 12, 20);
+    background-color: white;
+    border-color: rgb(12, 12, 20)
+}
+.reg-ctn{
+    background-color: rgb(28, 28, 46);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    font-size: 30px;
+    border-radius: 8px;
+}
+.reg-ctn button{
+    background-color: rgb(12, 12, 20);
+    color: white;
+    padding: 10px;
+    border: 5px solid white;
+    font-size: 20px;
+}
+.reg-ctn button a{
+    text-decoration: none;
+    color: white;
+}
+.reg-ctn button a:hover{
+    color:rgb(12, 12, 20)
+}
+.reg-ctn button:hover{
+    cursor: pointer;
+    color: rgb(12, 12, 20);
+    background-color: white;
+    border-color: rgb(12, 12, 20)
+}
+input{
+    line-height:30px;
+}
+.lead-ctn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lead-ctn span{
+    color: green;
+}
+.lead-ctn h1{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 30px;
+}
+.lead-ctn button.minus{
+    background-color: red !important;
+    color: black;
+}
+.lead-ctn button{
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.lead-ctn button a{
+    text-decoration: none;
+    color: white;
+}
+#friends {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #friends td, #friends th {
+    border: 3px solid black;
+    padding: 10px;
+  }
+  
+  #friends tr:nth-child(even){background-color: rgb(28, 28, 46);}
+  
+  #friends tr:hover {background-color: #ddd; color: rgb(28, 28, 46);}
+  
+  #friends th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: green;
+    color: white;
+  }
+  
