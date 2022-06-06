@@ -7,7 +7,7 @@
 <br><br>
 <table border="1" id="books">
     <tr>
-        <th>id</th>
+        <!-- <th>id</th> -->
         <th>Name</th>
         <th>Rank</th>
         <th>Points</th>
@@ -16,9 +16,9 @@
     </tr>
     <%  friends.forEach( (friend) => { %>
         <tr>
-            <td>
-                <%= friend.id %>
-            </td>
+            <!-- <td>
+                <%# friend.id %>
+            </td> -->
             <td>
                 <%= friend.first_name + " " + friend.last_name%>
             </td>
@@ -38,6 +38,6 @@
         </tr>
         <% }) %>
 </table>
-<button onclick="count()">Friend Count</button>
+<button><a href="/add">Add Friend</a></button>
 <div>You have <span><%= count %> </span> friends</div>
 </body>

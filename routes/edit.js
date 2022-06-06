@@ -6,7 +6,6 @@ const connection = require('../database/db')
 //edit page
 router.get('/edit/:id',(req,res)=> {
     const id = req.params.id
-    console.log(id)
     let sql = `SELECT * FROM leaderboard.friends WHERE id = ${id}`
     let query = connection.query(sql, (err, result) =>{
         if (err) throw err

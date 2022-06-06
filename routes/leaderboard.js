@@ -9,7 +9,6 @@ router.get('/leaderboard', (req, res) =>{
    let sql2 = 'SELECT COUNT(id) AS friendCount FROM friends'
    let query = connection.query(sql, (err, rows) =>{
       let countQuery = connection.query(sql2, (err, count) =>{
-         console.log(count[0].friendCount)
          res.render('leaderboard',{
             table: 'friends',
             friends: rows,
