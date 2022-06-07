@@ -3,11 +3,33 @@
     <link rel="stylesheet" href="/styles.css">
 </head> 
 <body>
-<div>
-    <div>The average point is: <span><%= avg %> </span></div>
-    <div>The max point is: <span><%= max %></span></div>
-    <div>Your best-friend is: <span><%= bestFF + ' ' + bestFL %> </span></div>
-    <div>The min point is: <span><%= min %> </span></div>
-    <div>Your worst-friend is: <span><%= worstFF + ' ' + worstFL %> </span></div>
-</div>
+    <button style="background-color: green; border-radius: 8px; padding: 10px;">
+        <a href="/leaderboard" style="color: white; text-decoration: none">View Leaderboard</a></button>
+<table border="1" id="friends">
+    <tr>
+        <th>Information</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>Average Point</td>
+        <td> <span><%= avg %> </span></td>
+    </tr>
+    <tr>
+        <td>Maximum Point</td>
+        <td> <span><%= max %></td>
+    </tr>
+    <tr>
+        <td>Best Friend</td>
+        <td><span><%= bestFF + ' ' + bestFL %> </span></td>
+    </tr>
+    <tr>
+        <td>Minimum Point</td>
+        <td><span><%= min %> </span></td>
+    </tr>
+    <tr>
+        <td>Worst Friend</td>
+        <td><span><%= worstFF + ' ' + worstFL %> </span></td>
+    </tr>
+</table>
+
 </body>

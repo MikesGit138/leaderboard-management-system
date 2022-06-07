@@ -13,7 +13,6 @@ router.post('/save', (req,res) => {
     let data = {
         first_name: req.body.firstName,
         last_name: req.body.lastName,
-        rank: req.body.rank,
         points: req.body.points
     }
     let sql = "INSERT INTO friends SET ?"

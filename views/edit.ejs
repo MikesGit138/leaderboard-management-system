@@ -15,15 +15,16 @@
                 <label for="description">Last Name</label>
                 <input type="text" name="lastName" value="<%= friends.last_name %>">
             </div>
-            <div>
-                <label for="start">Rank</label>
-                <input type="text" name="rank" value="<%= friends.rank %>">
-            </div>
+                <!-- <div>
+                    <label for="start">Rank</label>
+                    <input type="text" name="rank" value="<%# friends.rank %>">
+                </div> -->
             <div>
                 <label for="due">Points</label>
                 <input type="text" name="points" value="<%= friends.points %>">
             </div>
             <button type="submit">Submit</button>
+            <button><a href="/leaderboard">Back</a></button>
         </form>
     </div>
     </section>

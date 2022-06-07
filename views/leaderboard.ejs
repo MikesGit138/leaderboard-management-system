@@ -11,42 +11,43 @@
         <h1><span><%= table %></span> LeaderBoard</h1>
         <table border="1" id="friends">
             <tr>
-                <!-- <th>id</th> -->
                 <th>Name</th>
-                <!-- <th>Rank</th> -->
+                <th>Rank</th>
                 <th>Points</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
                 <th>Changes</th>
             </tr>
-            <% friends.forEach( (friend)=> { %>
+            <% let i = 1;friends.forEach( (friend)=> { %>
                 <tr>
-                    <!-- <td>
-                <%# friend.id %>
-            </td> -->
                     <td>
                         <%= friend.first_name + " " + friend.last_name%>
                     </td>
-                    <!-- <td>
+                    <td>
+                        <%= i %>
                         <%# friend.rank %>
-                    </td> -->
+                    </td>
                     <td>
                         <%= friend.points %>
                         <!-- <span onclick="count">0</span> -->
                     </td>
-                    <td>
+                    <!-- <td>
                         <button>+100</button>
                         <button class="minus">-100</button>
-                    </td>
+                    </td> -->
                     <td>
                         <button><a href="edit/<%= friend.id %> ">Edit</a></button>
                         <button class="minus"><a href="delete/<%= friend.id %> ">Remove</a></button>
                     </td>
                 </tr>
+                <%  i++; 
+                         %>
                 <% }) %>
         </table>
-        <button style="margin: 10px;"><a href="/add">Add Friend</a></button>
+        <div style="position: absolute; top: 80%;">
+        <button style="margin: 10px 25px;"><a href="/add">Add Friend</a></button>
         <div>You have <span>
                 <%= count %>
             </span> friends</div>
+            </div>
     </section>
 </body>

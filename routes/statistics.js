@@ -6,13 +6,12 @@ const connection = require('../database/db')
 
 
 router.get('/stats', (req, res) => {
-    let sql = `select avg(points) as average from friends; 
+    let sql = `select round(avg(points)) as average from friends; 
                 select max(points) as maximum from friends;
                     select min(points) as minimum from friends;
                     select first_name, last_name from friends group by first_name order by min(points);
                     select first_name, last_name from friends group by first_name order by min(points) desc`
     let query = connection.query(sql, (err, result) => {
-        console.log(result[4][0].last_name)
         res.render('stats', {
             avg: result[0][0].average,
             max: result[1][0].maximum,
