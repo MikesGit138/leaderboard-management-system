@@ -5,7 +5,8 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'leaderboard'
+    database: 'leaderboard',
+    multipleStatements: true
 })
 
 //run test to see if database is connected

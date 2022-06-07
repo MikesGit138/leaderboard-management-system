@@ -3,8 +3,10 @@
     <title>LeaderBoard Page</title>
 </head>
 <body>
-    <button style="float: right; background-color: green; border-radius: 8px; padding: 10px;">
+    <button style="background-color: green; border-radius: 8px; padding: 10px;">
         <a href="/" style="color: white; text-decoration: none">Back To Home</a></button>
+        <button style="background-color: white; border-radius: 8px; padding: 10px;">
+            <a href="/stats" style="color: green; text-decoration: none">View Stats</a></button>
     <section class="lead-ctn">
         <h1><span><%= table %></span> LeaderBoard</h1>
         <table border="1" id="friends">
@@ -29,6 +31,7 @@
                     </td>
                     <td>
                         <%= friend.points %>
+                        <!-- <span onclick="count">0</span> -->
                     </td>
                     <td>
                         <button>+100</button>
@@ -41,7 +44,7 @@
                 </tr>
                 <% }) %>
         </table>
-        <button><a href="/add">Add Friend</a></button>
+        <button style="margin: 10px;"><a href="/add">Add Friend</a></button>
         <div>You have <span>
                 <%= count %>
             </span> friends</div>

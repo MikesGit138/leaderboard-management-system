@@ -15,11 +15,7 @@ router.get('/leaderboard', (req, res) =>{
             count : count[0].friendCount 
          })
       })
-      //  if (err) console.log('connection unsuccessful for leaderboard');
-      //  else console.log('leaderboard query ran')
 })
 })
-
-
 
 module.exports = router
