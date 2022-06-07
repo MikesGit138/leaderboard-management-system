@@ -38,7 +38,7 @@ const regRoute = require('./routes/register')
 const editRoute = require('./routes/edit')
 const addRoute = require('./routes/add')
 const delRoute = require('./routes/delete')
-
+const statsRoute = require('./routes/statistics')
 //routes
 server.use('/', homeRoute)
 server.use('/', leaderboardRoute)
@@ -47,6 +47,7 @@ server.use('/', regRoute)
 server.use('/', editRoute)
 server.use('/', addRoute)
 server.use('/', delRoute)
+server.use('/', statsRoute)
 
 server.listen(port, console.log(`listening on http://localhost:${port}`))
 
