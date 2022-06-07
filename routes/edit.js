@@ -22,7 +22,7 @@ router.post('/update',(req, res) => {
     const lname = req.body.lastName
     const rank = req.body.rank
     const points = req.body.points
-    let sql = `UPDATE leaderboard.friends SET first_name= '${fname}', last_name= '${lname}' WHERE id = ${id}`
+    let sql = `UPDATE leaderboard.friends SET first_name= '${fname}', last_name= '${lname}', points = ${points} WHERE id = ${id}`
     let query = connection.query(sql,(err, results) => {
       if(err) throw err;
       res.redirect('/leaderboard');
